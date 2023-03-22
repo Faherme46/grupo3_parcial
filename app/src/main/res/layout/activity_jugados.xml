@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="74dp"
         android:text="Partidos Jugados"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,10 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="94dp"
         android:text="0"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloEmpates"
         app:layout_constraintTop_toBottomOf="@+id/victorias" />
 
@@ -37,10 +41,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="94dp"
         android:text="0"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloVictorias"
         app:layout_constraintTop_toBottomOf="@+id/partidosJugados" />
 
@@ -50,10 +56,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="93dp"
         android:text="0"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloDerrotas"
         app:layout_constraintTop_toBottomOf="@+id/empates" />
 
@@ -61,29 +69,32 @@
         android:id="@+id/tituloVictorias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
         android:layout_marginTop="76dp"
         android:text="Victorias"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/partidosJugados"
-        tools:layout_editor_absoluteX="81dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partidosJugados" />
 
     <TextView
         android:id="@+id/tituloEmpates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
         android:layout_marginTop="28dp"
         android:text="Empates"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/tituloVictorias"
-        tools:layout_editor_absoluteX="81dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloVictorias" />
 
     <TextView
         android:id="@+id/tituloDerrotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="28dp"
         android:text="Derrotas"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/tituloEmpates"
-        tools:layout_editor_absoluteX="80dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloEmpates" />
 </androidx.constraintlayout.widget.ConstraintLayout>
