@@ -1,9 +1,12 @@
 package com.example.grupo3_parcial;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.grupo3_parcial.adapter.AdapterProductos;
 import com.example.grupo3_parcial.clases.partido;
 
 import java.util.ArrayList;
@@ -11,12 +14,25 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<partido> listaPartidos;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Partidos de la Seleccion");
+        cargarDatos();
+        recyclerView=findViewById(R.id.listaPartidos);
+        AdapterProductos adapterProductos=new AdapterProductos(listaPartidos);
+        adapterProductos.setOnItemClickListener(new AdapterProductos.OnItemClickListener() {
+            @Override
+            public void onItemClick(partido p, int posicion) {
+
+            }
+        });
+
+        recyclerView.setAdapter(adapterProductos);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
     }
@@ -89,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             "A. Franco",
             "E. Valencia",
             "M. Estrada"
-
     };
 
 
@@ -100,5 +115,12 @@ public class MainActivity extends AppCompatActivity {
         partido partido3 = new partido("Peru",0, "http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/1429.png",2,equipo3);
         partido partido4 = new partido("Brasil",1, "http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/1881.png",1,equipo4);
         partido partido5 = new partido("Ecuador",1, "https://static.wikia.nocookie.net/futbol/images/b/b2/Ecuador.png/revision/latest?cb=20210804150428",0,equipo5);
+
+        listaPartidos=new ArrayList<>();
+        listaPartidos.add(partido1);
+        listaPartidos.add(partido2);
+        listaPartidos.add(partido3);
+        listaPartidos.add(partido4);
+        listaPartidos.add(partido5);
     }
 }
