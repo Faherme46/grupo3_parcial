@@ -95,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void cargarDatos(){
 
-        partido partido1 = new partido("Venezuela",1, "http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/2930.png",2,equipo1);
+        partido partido1 = new partido("Venezuela",1, "https://e00-marca.uecdn.es/deporte/futbol/copa-america/2016/img/escudos/venezuela.png",2,equipo1);
         partido partido2 = new partido("Argentina",2, "https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-1-1.png",1,equipo2);
-        partido partido3 = new partido("Peru",0, "http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/1429.png",2,equipo3);
-        partido partido4 = new partido("Brasil",1, "http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/1881.png",1,equipo4);
+        partido partido3 = new partido("Peru",0, "https://i.pinimg.com/originals/df/80/24/df8024f334cb93242252e56555493cf4.png",2,equipo3);
+        partido partido4 = new partido("Brasil",1, "https://i.pinimg.com/originals/5f/6b/60/5f6b606c2c2e7e0cc5c6d6de2edb7afe.png",1,equipo4);
         partido partido5 = new partido("Ecuador",1, "https://static.wikia.nocookie.net/futbol/images/b/b2/Ecuador.png/revision/latest?cb=20210804150428",0,equipo5);
     }
 }
