@@ -13,8 +13,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="74dp"
-        android:text="@string/partidos_jugados"
-        android:textColor="@color/black"
+        android:text="Partidos Jugados"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,46 +21,49 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtempates"
+        android:id="@+id/empates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="94dp"
         android:text="0"
-        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloEmpates"
-        app:layout_constraintTop_toBottomOf="@+id/txtvictorias" />
+        app:layout_constraintTop_toBottomOf="@+id/victorias" />
 
     <TextView
-        android:id="@+id/txtvictorias"
+        android:id="@+id/victorias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="94dp"
         android:text="0"
-        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloVictorias"
         app:layout_constraintTop_toBottomOf="@+id/partidosJugados" />
 
     <TextView
-        android:id="@+id/txtderrotas"
+        android:id="@+id/derrotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="93dp"
         android:text="0"
-        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloDerrotas"
-        app:layout_constraintTop_toBottomOf="@+id/txtempates" />
+        app:layout_constraintTop_toBottomOf="@+id/empates" />
 
     <TextView
         android:id="@+id/tituloVictorias"
@@ -69,8 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="76dp"
-        android:text="@string/victorias"
-        android:textColor="@color/black"
+        android:text="Victorias"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partidosJugados" />
@@ -81,8 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="28dp"
-        android:text="@string/empates"
-        android:textColor="@color/black"
+        android:text="Empates"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloVictorias" />
@@ -93,8 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="28dp"
-        android:text="@string/derrotas"
-        android:textColor="@color/black"
+        android:text="Derrotas"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloEmpates" />
