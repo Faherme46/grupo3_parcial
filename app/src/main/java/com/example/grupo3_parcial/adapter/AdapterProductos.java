@@ -3,7 +3,7 @@ package com.example.grupo3_parcial.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.grupo3_parcial.R;
 import com.example.grupo3_parcial.clases.partido;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,6 @@ public class AdapterProductos extends RecyclerView.Adapter<AdapterProductos.View
         this.onItemClickListener=null;
 
     }
-
     public void setListaPartidos(ArrayList<partido> listaPartidos) {
         this.listaPartidos = listaPartidos;
         notifyDataSetChanged();
@@ -44,7 +44,7 @@ public class AdapterProductos extends RecyclerView.Adapter<AdapterProductos.View
     @Override
     public void onBindViewHolder(@NonNull AdapterProductos.ViewHolder holder, int position) {
         partido p= listaPartidos.get(position);
-        holder.enlazar(p);    }
+        holder.enlazar(p);}
 
 
     @Override
@@ -59,16 +59,17 @@ public class AdapterProductos extends RecyclerView.Adapter<AdapterProductos.View
             super(itemView);
             nameRival=itemView.findViewById(R.id.nombreEquipo);
             golesEquipo=itemView.findViewById(R.id.golesEquipo);
-            golesEquipo=itemView.findViewById(R.id.golesRival);
-            escudo=itemView.findViewById(R.id.golesRival);
+            golesRival=itemView.findViewById(R.id.golesRival);
+            escudo=itemView.findViewById(R.id.escudo);
 
         }
         public void enlazar(partido p){
             nameRival.setText(p.getNombre_rival());
-            golesEquipo.setText(p.getGoles_anotados_rival().toString());
-            //Picasso.get().load(p.getEscudo_url())
-            //        .error(R.drawable.ic_launcher_background)
-            //        .into(escudo);
+            golesRival.setText(String.valueOf(p.getGoles_anotados_rival()));
+            golesEquipo.setText(String.valueOf(p.getGoles_anotados_principal()));
+            Picasso.get().load(p.getEscudo_url())
+                    .error(R.drawable.ic_launcher_background)
+                   .into(escudo);
 
             if(onItemClickListener!=null){
                 itemView.setOnClickListener(new View.OnClickListener() {
