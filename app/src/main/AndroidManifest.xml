@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Grupo3_parcial"
         tools:targetApi="31">
         <activity
+            android:name=".JugadosActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
