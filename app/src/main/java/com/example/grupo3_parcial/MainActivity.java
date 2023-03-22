@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.grupo3_parcial.adapter.AdapterProductos;
 import com.example.grupo3_parcial.clases.partido;
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<partido> listaPartidos;
     private RecyclerView recyclerView;
+    private Button btnPartidos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +27,23 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Partidos de la Seleccion");
         cargarDatos();
         recyclerView=findViewById(R.id.listaPartidos);
+        btnPartidos=findViewById(R.id.bJugados);
+
         AdapterProductos adapterProductos=new AdapterProductos(listaPartidos);
         adapterProductos.setOnItemClickListener(new AdapterProductos.OnItemClickListener() {
             @Override
             public void onItemClick(partido p, int posicion) {
+                Intent i1=new Intent(MainActivity.this, jugadoresActivity.class);
+                i1.putExtra("partido",p);
+                startActivity(i1);
+            }
+        });
+        btnPartidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this, JugadosActivity.class);
+                i.putExtra("partido",listaPartidos);
+                startActivity(i);
 
             }
         });

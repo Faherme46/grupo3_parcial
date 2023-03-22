@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">grupo3_parcial</string>
     <string name="raya">-</string>
+    <string name="partidso">Partidos Jugados</string>
+    <string name="victorias">Victorias</string>
+    <string name="empates">Empates</string>
+    <string name="derrotas">Derrotas</string>
+    <string name="partidos_jugados">Partidos Jugados</string>
+    <string name="jjj">Jugadores:</string>
 </resources>
