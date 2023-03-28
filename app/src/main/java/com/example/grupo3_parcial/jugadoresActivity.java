@@ -10,8 +10,9 @@ import com.example.grupo3_parcial.clases.partido;
 public class jugadoresActivity extends AppCompatActivity {
 
     private partido partido;
-    private TextView titulo;
-    String mensaje="Partido ";
+    private TextView titulo,txtJugadores;
+    private String mensaje="Partido ";
+    private String titular="";
 
 
     @Override
@@ -23,10 +24,22 @@ public class jugadoresActivity extends AppCompatActivity {
         setTitle(mensaje+"Vs "+partido.getNombre_rival());
 
         titulo=findViewById(R.id.txtTitulo);
+        txtJugadores=findViewById(R.id.listJugadores);
 
         evaluar(partido);
-
         titulo.setText(mensaje);
+
+        String[] lista=partido.getTitulares();
+
+        for (String j:
+             lista) {
+            titular+="· "+j+"\n";
+        }
+
+        txtJugadores.setText(titular);
+
+
+
 
     }
     public void evaluar(partido partido){

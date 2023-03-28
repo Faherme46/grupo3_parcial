@@ -6,5 +6,5 @@
     <string name="empates">Empates</string>
     <string name="derrotas">Derrotas</string>
     <string name="partidos_jugados">Partidos Jugados</string>
-    <string name="jjj">Jugadores:</string>
+    <string name="jjj">Titular del rival:</string>
 </resources>
