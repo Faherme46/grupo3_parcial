@@ -1,8 +1,9 @@
 package com.example.grupo3_parcial.clases;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class partido {
+public class partido implements Serializable {
 
     private String nombre_rival;
     private int goles_anotados_rival;
